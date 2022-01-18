@@ -1,0 +1,21 @@
+from http.server import HTTPServer
+from requesthandler import requestHandler
+
+
+
+
+
+
+
+
+def main():
+    PORT= 9000
+    server_address = ('localhost', PORT)
+    server = HTTPServer(server_address, requestHandler)
+    print ('Server running on port %s' %PORT)
+    server.serve_forever()
+    thisrequestHandler = requestHandler()
+
+
+if __name__ == "__main__":
+    main()
